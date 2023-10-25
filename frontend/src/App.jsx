@@ -10,26 +10,26 @@ import RootLayout from "./components/layouts/RootLayout.jsx";
 import ProtectedRoutes from "./utils/ProtectedRoutes.jsx";
 
 function App() {
-  return (
-    <>
-      <Router>
-        <AuthContextProvider>
-          <Routes>
-            <Route element={<RootLayout />}>
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/signin" element={<Signin />} />
-            </Route>
-            <Route element={<ProtectedRoutes />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/payments" element={<Payments />} />
-              <Route path="/deposits" element={<Deposits />} />
-            </Route>
-          </Routes>
-        </AuthContextProvider>
-      </Router>
-    </>
-  );
+	return (
+		<>
+			<Router>
+				<AuthContextProvider>
+					<Routes>
+						<Route element={<RootLayout />}>
+							<Route path="/signup" element={<Signup />} />
+							<Route path="/signin" element={<Signin />} />
+						</Route>
+						<Route element={<ProtectedRoutes />}>
+							<Route path="/" element={<Home />} />
+							<Route path="/dashboard" element={<Dashboard />} />
+							<Route path="/payments" element={<Payments />} />
+							<Route path="/deposits" element={<Deposits />} />
+						</Route>
+					</Routes>
+				</AuthContextProvider>
+			</Router>
+		</>
+	);
 }
 
 export default App;
