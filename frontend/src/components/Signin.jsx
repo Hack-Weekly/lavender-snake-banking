@@ -16,6 +16,7 @@ const Signin = () => {
       <p>
         Haven&apos;t signed up yet? <Link to="/signup">Sign Up now</Link>
       </p>
+      <Link to="/dashboard">Go to dashboard</Link>
     </div>
   );
 };
