@@ -1,14 +1,21 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const Signin = () => {
-  const { user, setUser } = useContext(AuthContext);
+  const { setUser } = useContext(AuthContext);
 
-  console.log(user);
+  const signIn = () => {
+    setUser("123");
+  };
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center">
       <h1>Sign In</h1>
-      <button onClick={() => setUser("123")}>Sign In</button>
+      <button onClick={signIn}>Sign In</button>
+      <p>
+        Haven&apos;t signed up yet? <Link to="/signup">Sign Up now</Link>
+      </p>
     </div>
   );
 };
