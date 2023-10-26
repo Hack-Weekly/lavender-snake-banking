@@ -1,20 +1,29 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { navOptions } from "../../constants/navOptions";
 
 const LeftSideBar = () => {
   return (
     <div className="max-h-[calc(100vh-3rem)] w-48 flex flex-col p-4 bg-accent/25 text-accent rounded-xl">
       <div className="text-center">LOGO</div>
-      <div className="h-36 flex items-center justify-center border mx-4 mt-12 mb-2">
+      <div className="h-28 flex items-center justify-center border mx-6 mt-12 mb-2">
         Profile Image
       </div>
       <div className="text-center">user</div>
-      <nav className="mt-12 flex flex-col items-center flex-auto">
-        <ul className="flex flex-col items-start text-lg text-lightest">
+      <nav className="mt-8 flex flex-col items-center flex-auto">
+        <ul className="flex flex-col gap-2 text-lg text-lightest">
           {navOptions.map((navOption) => {
             return (
               <li key={navOption.name}>
-                <Link to={navOption.path}>{navOption.name}</Link>
+                <NavLink
+                  to={navOption.path}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-2 py-1 rounded-md ${
+                      isActive ? "bg-grey/40" : ""
+                    }`
+                  }
+                >
+                  <navOption.icon size={18} strokeWidth={1} /> {navOption.name}
+                </NavLink>
               </li>
             );
           })}
