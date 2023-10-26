@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard.jsx";
 import Deposits from "./components/Deposits.jsx";
 import AuthContextProvider from "./context/AuthContext.jsx";
 import RootLayout from "./components/layouts/RootLayout.jsx";
+import DashboardLayout from "./components/layouts/DashboardLayout.jsx";
 // import ProtectedRoutes from "./utils/ProtectedRoutes.jsx";
 
 function App() {
@@ -21,9 +22,11 @@ function App() {
               <Route path="/signin" element={<Signin />} />
             </Route>
             {/* <Route element={<ProtectedRoutes />}> */}
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/payments" element={<Payments />} />
-            <Route path="/deposits" element={<Deposits />} />
+            <Route element={<DashboardLayout />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/payments" element={<Payments />} />
+              <Route path="/deposits" element={<Deposits />} />
+            </Route>
             {/* </Route> */}
           </Routes>
         </AuthContextProvider>
