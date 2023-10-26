@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signin = () => {
   const { setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const signIn = () => {
     setUser("123");
+    navigate("/dashboard");
   };
 
   return (

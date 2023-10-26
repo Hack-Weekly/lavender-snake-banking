@@ -7,4 +7,8 @@
     background: grey;
     padding: 0.5rem 1rem;
   }
+
+  a {
+    color: rgb(56, 56, 139);
+  }
 }

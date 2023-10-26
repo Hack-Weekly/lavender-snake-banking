@@ -16,11 +16,11 @@ function App() {
         <AuthContextProvider>
           <Routes>
             <Route element={<RootLayout />}>
+              <Route path="/" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/signin" element={<Signin />} />
             </Route>
             <Route element={<ProtectedRoutes />}>
-              <Route path="/" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/payments" element={<Payments />} />
               <Route path="/deposits" element={<Deposits />} />
