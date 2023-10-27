@@ -23,7 +23,7 @@ const LeftSideBar = () => {
                                     to={navOption.path}
                                     className={({isActive}) =>
                                         `flex items-center gap-2 px-2 py-1 rounded-md my-1.5 transition-colors hover:bg-gradient-to-r from-[#3E79E5] to-[#01B8E3] hover:text-transparent hover:bg-clip-text hover:bg-clip-icon duration-150  ${
-                                            isActive ? "text-white bg-white/20 " : ""
+                                            isActive ? "text-white bg-white/20" : ""
                                         }`
                                     }
                                 >
@@ -40,7 +40,10 @@ const LeftSideBar = () => {
                         <NavLink
                             to={"./home"}
                             className={({isActive}) =>
-                                `flex items-center gap-2 px-2 py-1 rounded-md my-1.5 transition-colors hover:bg-gradient-to-r from-[#3E79E5] to-[#01B8E3] hover:text-transparent hover:bg-clip-text hover:bg-clip-icon duration-150  ${
+                                `flex items-center gap-2 px-2 py-1 rounded-md my-1.5 transition-colors 
+                                hover:bg-gradient-to-r from-[#3E79E5] to-[#01B8E3] hover:text-transparent hover:bg-clip-text hover:bg-clip-icon 
+                                before:
+                                duration-150  ${
                                     isActive ? "text-white bg-white/20 " : ""
                                 }`
                             }
