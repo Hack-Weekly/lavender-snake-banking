@@ -34,6 +34,7 @@ python3 manage.py collectstatic --noinput
 python3 manage.py makemigrations
 python manage.py migrate
 
+
 if [[ "$DEBUG" == "True" ]]; then
   if [ -f "db.json" ]; then
     echo "Loading dummy database..."
