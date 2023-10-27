@@ -4,7 +4,7 @@ import {HelpCircle} from "lucide-react";
 
 const LeftSideBar = () => {
     return (
-        <div className="max-h-[calc(100vh-3rem)] w-48 flex flex-col p-4 bg-accent/25 text-accent rounded-xl">
+        <div className="max-h-[calc(100vh-3rem)] w-60 flex flex-col p-4 bg-[#3D7AE5]/10 text-accent rounded-xl">
             <div className="text-center">LOGO</div>
             <div className="h-28 flex items-center justify-center border mx-6 mt-12 mb-2">
                 Profile Image
