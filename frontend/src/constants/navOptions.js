@@ -16,7 +16,7 @@ import {
 export const navOptions = [
   {
     name: "Dashboard",
-    path: "/dashboard",
+    path: "/",
     element: Dashboard,
     icon: LayoutDashboardIcon,
   },

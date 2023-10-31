@@ -18,10 +18,8 @@ const DashboardLayout = () => {
         </main>
       </div>
       <div className={"flex flex-col"}>
-        <div className={"py-5"}>
+        <div className="flex flex-col gap-6">
           <AccountInfo accInfo={"123-XXX-XXX"} />
-        </div>
-        <div className={"py-5"}>
           <NotificationPanel notifications={sampleNotif} />
         </div>
       </div>
