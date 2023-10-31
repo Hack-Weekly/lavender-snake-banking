@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home.jsx";
 import Signup from "./components/Signup.jsx";
 import Signin from "./components/Signin.jsx";
 import AuthContextProvider from "./context/AuthContext.jsx";
@@ -14,7 +13,6 @@ function App() {
         <AuthContextProvider>
           <Routes>
             <Route element={<RootLayout />}>
-              <Route path="/" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/signin" element={<Signin />} />
             </Route>
