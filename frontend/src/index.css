@@ -3,8 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  button {
-    background: grey;
-    padding: 0.5rem 1rem;
+}
+
+@layer utilities {
+  .input {
+    @apply px-2.5 py-1.5 block bg-gray/10 border border-accent/60 rounded-md focus:outline-2 focus:outline-accent;
+  }
+
+  .btn {
+    @apply bg-accent hover:bg-dark/70 rounded-md transition-colors duration-200 px-4 py-2;
+  }
+
+  .link {
+    @apply text-blue-900 hover:underline;
   }
 }
