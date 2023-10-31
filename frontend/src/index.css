@@ -7,7 +7,7 @@
 
 @layer utilities {
   .input {
-    @apply px-2.5 py-1.5 block bg-gray/10 border border-accent/60 rounded-md focus:outline-2 focus:outline-accent;
+    @apply px-2.5 py-1.5 block bg-gray/10 border border-accent/60 rounded-md focus:ring-0 focus:ring-offset-0 focus:outline-2 focus:outline-accent;
   }
 
   .btn {
